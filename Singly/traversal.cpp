@@ -11,7 +11,7 @@ void traversal(node* ptr)
 {
     while (ptr != NULL)
     {
-        cout << "Element : " << ptr->data << "\tLocation :\t" << ptr->nextadd << endl;
+        cout << "Element : " << ptr->data << "\tNext Node :\t" << ptr->nextadd << endl;
         ptr = ptr->nextadd;
     }
 }

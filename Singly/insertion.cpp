@@ -21,7 +21,7 @@ void traversal(node* ptr)
 {
     while (ptr != NULL)
     {
-        cout << "Element : " << ptr->data << "\tLocation :\t" << ptr->next << endl;
+        cout << "Element : " << ptr->data << "\tNext Node :\t" << ptr->next << endl;
         ptr = ptr->next;
     }
 }
@@ -32,6 +32,25 @@ void insert_in_beg(node* &head, int val)
     new_node->data = val;
     new_node->next = head;
     head = new_node;
+}
+
+void insert_at_last(node* &head, int val)
+{
+    node* new_node = new node();
+    node* temp = head;
+    new_node->data = val;
+    new_node->next = NULL;
+    if (head == NULL) 
+    {
+        head = new_node; 
+        return;
+    }
+
+    while (temp->next!=NULL)
+    {
+        temp = temp->next;
+    }
+    temp->next = new_node;
 }
 
 int main()
@@ -53,6 +72,8 @@ int main()
     third->next = NULL;
     
     insert_in_beg(head, 0);
+    traversal(head);
+    insert_at_last(head,4);
     traversal(head);
 
     return 0;

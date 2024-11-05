@@ -5,8 +5,7 @@
         2)Insertion at Last
 
         3)Insertion in between  
-    
-        4)Insertion after a NODE 
+        
 */
 #include<iostream>
 using namespace std;
@@ -53,6 +52,21 @@ void insert_at_last(node* &head, int val)
     temp->next = new_node;
 }
 
+void insert_in_between(node* &head, int index, int val)
+{
+    node* new_node = new node();
+    node* temp = head;
+    int i = 0;
+    while (i < index-1)
+    {
+        temp = temp->next;
+        i++;
+    }
+    new_node->data = val;
+    new_node->next = temp->next;
+    temp->next = new_node;
+}
+
 int main()
 {
     node* head;
@@ -73,7 +87,7 @@ int main()
     
     insert_in_beg(head, 0);
     traversal(head);
-    insert_at_last(head,4);
+    insert_in_between(head, 1, 7); 
     traversal(head);
 
     return 0;

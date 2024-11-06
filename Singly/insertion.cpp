@@ -5,7 +5,7 @@
         2)Insertion at Last
 
         3)Insertion in between  
-        
+
 */
 #include<iostream>
 using namespace std;
@@ -87,7 +87,7 @@ int main()
     
     insert_in_beg(head, 0);
     traversal(head);
-    insert_in_between(head, 1, 7); 
+    insert_in_between(head, 2, 7); 
     traversal(head);
 
     return 0;

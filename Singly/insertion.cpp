@@ -1,12 +1,3 @@
-/*  There are 3 types of insertion : 
-
-        1)Insertion in the Beginning
-          
-        2)Insertion at Last
-
-        3)Insertion in between  
-
-*/
 #include<iostream>
 using namespace std;
 

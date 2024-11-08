@@ -7,27 +7,27 @@ struct node
     node* next;
 };
 
-void traversal(node* ptr)
+void traversal(node* head)
 {
-    while (ptr != NULL)
+    while (head != NULL)
     {
-        cout << "Element : " << ptr->data << "\tNext Node :\t" << ptr->next << endl;
-        ptr = ptr->next;
+        cout << "Element : " << head->data << "\tNext Node :\t" << head->next << endl;
+        head = head->next;
     }
     cout << endl;
 }
 
-void delete_first(node* &ptr)
+void delete_first(node* &head)
 {
-    node* p = ptr;
-    ptr = ptr->next;
+    node* p = head;
+    head = head->next;
     delete p;
 }
 
-void delete_last(node* &ptr)
+void delete_last(node* &head)
 {
-    node* p = ptr;
-    node* q = ptr->next;
+    node* p = head;
+    node* q = head->next;
     while (q->next!=NULL)
     {
         p = p->next;
@@ -37,9 +37,9 @@ void delete_last(node* &ptr)
     delete q;
 }
 
-void delete_bet(node* &ptr, int index)
+void delete_bet(node* &head, int index)
 {
-    node* p = ptr;
+    node* p = head;
     node* q;
     int i = 0;
     while (i!=index-1)

@@ -60,12 +60,9 @@ void insert_in_between(node* &head, int index, int val)
 
 int main()
 {
-    node* head;
-    node* second;
-    node* third;
-    head = new node();
-    second = new node();
-    third = new node();
+    node* head = new node();
+    node* second = new node();
+    node* third = new node();
 
     head->data = 1;
     head->next = second;

@@ -9,12 +9,9 @@ struct node
 
 int main()
 {
-    node* head;
-    node* second;
-    node* third;
-    head = new node();
-    second = new node();
-    third = new node();
+    node* head = new node();
+    node* second = new node();
+    node* third = new node();
 
     head->data = 1;
     head->nextadd = second;

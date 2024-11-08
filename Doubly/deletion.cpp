@@ -39,6 +39,22 @@ void delete_last(node* &head)
     delete temp2;
 }
 
+void delete_bet(node* head, int index)
+{
+    node* temp1 = head;
+    node* temp2;
+    int i = 0;
+    while (i != index-1)
+    {
+        temp1 = temp1->next;
+        i++;
+    }
+    temp2 = temp1->next;
+    temp1->next = temp2->next;
+    temp2->next->pre = temp1;
+    delete temp2;
+}
+
 int main()
 {
     node* head = new node();
@@ -79,6 +95,7 @@ int main()
 
     delete_first(head);
     delete_last(head);
+    delete_bet(head, 2);
     traversal(head);
     return 0;
 }
